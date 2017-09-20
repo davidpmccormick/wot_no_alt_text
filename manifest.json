@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Wot no alt text",
+  "description": "This extension highlights images without alt text",
+  "version": "1.1",
+  "browser_action": {
+    "default_icon": "icon_normal.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "css": [ "highlight.css" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
